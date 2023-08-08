@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-     sealed class Library
+    sealed class Library
     {
         private List<Book> library = new List<Book>();
-        
+
+
         public void AddBook(Book book)
         {
             if (library.Contains(book))
             {
                 Console.WriteLine("Book is already added!");
             }
-            else 
+            else
             {
                 library.Add(book);
             }
@@ -24,12 +25,12 @@ namespace Library
 
         public void PrintLibrary()
         {
-           
+
             foreach (Book book in library)
             {
                 Console.WriteLine($"'{book.GetAuthor()}'  '{book.GetTitle()}'  '{book.GetContent()}'");
             }
-   
+
         }
 
         public void RemoveBook(Book book)
@@ -50,12 +51,11 @@ namespace Library
             {
                 return book;
             }
-            else 
+            else
             {
-                return null; 
+                return null;
             }
         }
-
         public bool isEmpty()
         {
             if (library.Count != 0)

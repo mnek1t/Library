@@ -2,7 +2,7 @@
 using Library;
 namespace Library_Myextentions
 {
-    static class FindAndReplaceManager
+    static class FindAndReplaceManager 
     {
         public static void FindNext(this Book book, string _content)
         {
@@ -48,7 +48,7 @@ namespace Library_Myextentions
             return prefixFunction;
         }
 
-        private static int KMPSearch(this Book book, string pattern)
+        public static int KMPSearch(this Book book, string pattern)
         {
             string text = book.GetContent();
             int textLength = text.Length;
