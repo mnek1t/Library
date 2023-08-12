@@ -9,8 +9,17 @@ namespace Library
     sealed class Library
     {
         private List<Book> library = new List<Book>();
+        private static Library lib = null;
 
-
+        private Library(){ }
+        public static Library CreateLibrary()
+        {
+            if (lib==null)
+            {
+                lib = new Library();
+            }
+            return lib;
+        }
         public void AddBook(Book book)
         {
             if (library.Contains(book))
